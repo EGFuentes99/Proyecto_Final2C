@@ -1,0 +1,59 @@
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f4f4;
+    margin:0;
+}
+
+/* Barra superior */
+.header{
+    background:linear-gradient(to right,#d4af37,#664c09);
+    color:rgb(255, 255, 255);
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.header h1{margin:0;}
+.nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
+
+/* Hero principal */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:white;
+    margin:30px auto;
+    width:80%;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+.hero h2{color:#333;margin-bottom:15px;}
+.hero p{color:#555;margin-bottom:25px;font-size:18px;}
+.btn{ 
+    padding:12px 25px;
+    background:#d4af37;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+.btn:hover{background:#b8860b;}
+
+/* Sección de características */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    width:80%;
+    margin:40px auto;
+}
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+}
+.card h3{margin-bottom:10px;color:#333;}
+.card p{color:#555;}

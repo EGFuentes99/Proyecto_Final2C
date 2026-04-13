@@ -1,0 +1,48 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Agenda de Contactos</title>
+<link rel="stylesheet" href="style-agenda.css">
+<script src="agenda/Agenda.js"></script>
+</head>
+<body>
+
+<script src="sesion/sesion.js"></script>
+
+
+<script>
+window.onload=function(){
+    let usuario=JSON.parse(localStorage.getItem("sesionActiva"));
+    if(!usuario){window.location.href="../login/Login.html";}
+}
+</script>
+
+<div class="header">
+    <h1>AGENDA DE CONTACTOS</h1>
+    <div class="nav">
+        <a href="../menu/menu.html">Menú</a>
+        <a href="MisContactos.html">Mi Cuenta</a>
+        <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="tabs">
+        <button class="active" onclick="mostrarLista()">Ver Contactos</button>
+        <button onclick="mostrarFormulario()">Añadir Contacto</button>
+    </div>
+    <div class="search">
+        <input type="text" id="buscador" placeholder="Buscar contacto..." onkeyup="buscarContacto()">
+    </div>
+    <div id="listaContactos"></div>
+    <button class="add-contacto" onclick="mostrarFormulario()">+ Añadir Nuevo Contacto</button>
+    <div class="formulario" id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="telefono" placeholder="Teléfono">
+        <input type="email" id="correo" placeholder="Correo">
+        <input type="text" id="categoria" placeholder="Categoría">
+        <button onclick="guardarContacto()">Guardar Contacto</button>
+    </div>
+</div>
+</body>
+</html>

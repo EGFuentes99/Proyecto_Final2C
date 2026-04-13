@@ -1,0 +1,73 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    margin:0;
+}
+
+/* Barra superior */
+.header{
+    background: linear-gradient(to right,#d4af37,#664c09);
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h1{margin:0;}
+.nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
+
+/* Contenedor principal */
+.container{
+    width:850px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Tabs */
+.tabs{display:flex;gap:10px;margin-bottom:20px;}
+.tabs button{padding:10px 20px;border:none;border-radius:5px;cursor:pointer;background:#ddd;font-weight:bold;}
+.tabs button.active{background:#d4af37;color:white;}
+
+/* Buscador */
+.search{margin-bottom:20px;}
+.search input{width:100%;padding:10px;border-radius:5px;border:1px solid #ccc;}
+
+/* Tarjeta contacto */
+.contacto{
+    border:1px solid #ccc;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fafafa;
+}
+.contacto-info strong{font-size:18px;color:#333;}
+.contacto-info span{color:#555;display:block;margin-top:3px;}
+.contacto button{border:none;padding:6px 10px;border-radius:5px;cursor:pointer;margin-left:5px;font-weight:bold;}
+.edit{background:#f6c23e;color:white;}
+.delete{background:#e74a3b;color:white;}
+
+/* Botón añadir */
+.add-contacto{
+    display:block;
+    margin:20px auto 0;
+    padding:12px 20px;
+    background:#d4af37;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* Formulario */
+.formulario{display:none;margin-top:20px;}
+.formulario input{width:100%;padding:10px;margin:8px 0;border-radius:5px;border:1px solid #ccc;}
+.formulario button{margin-top:10px;padding:12px;width:100%;border:none;border-radius:5px;background:#d4af37;color:white;cursor:pointer;font-size:16px;font-weight:bold;}

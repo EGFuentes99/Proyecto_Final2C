@@ -1,0 +1,13 @@
+body{font-family:'Segoe UI',sans-serif;background:#f4f4f4;margin:0;}
+.header{background:linear-gradient(to right,#d4af37,#b8860b);color:white;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;}
+.header h1{margin:0;}
+.nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;}
+.container{width:800px;margin:30px auto;background:white;padding:30px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,0.2);}
+.categoria{border:1px solid #ccc;padding:15px;border-radius:8px;margin-bottom:15px;display:flex;justify-content:space-between;align-items:center;background:#fafafa;}
+.categoria-info strong{font-size:18px;color:#333;}
+.categoria button{border:none;padding:6px 10px;border-radius:5px;cursor:pointer;margin-left:5px;font-weight:bold;}
+.edit{background:#f6c23e;color:white;}
+.delete{background:#e74a3b;color:white;}
+.formulario{margin-top:20px;}
+.formulario input{width:100%;padding:10px;margin:8px 0;border-radius:5px;border:1px solid #ccc;}
+.formulario button{margin-top:10px;padding:12px;width:100%;border:none;border-radius:5px;background:#d4af37;color:white;cursor:pointer;font-size:16px;font-weight:bold;}

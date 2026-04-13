@@ -1,0 +1,36 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Acceso - Agenda</title>
+<link rel="stylesheet" href="login.css">
+<script src="login.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1>Acceso a la Agenda</h1>
+</div>
+
+<div class="container">
+    <div id="seleccion" class="cards">
+        <div class="card" onclick="mostrarLogin()"><h2>Iniciar Sesión</h2></div>
+        <div class="card" onclick="mostrarRegistro()"><h2>Registrarse</h2></div>
+    </div>
+
+    <div id="formLogin" class="formulario">
+        <h2>Iniciar Sesión</h2>
+        <input type="email" id="loginCorreo" placeholder="Correo">
+        <input type="password" id="loginPass" placeholder="Contraseña">
+        <button onclick="iniciarSesion()">Entrar</button>
+    </div>
+
+    <div id="formRegistro" class="formulario">
+        <h2>Registrarse</h2>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="email" id="correo" placeholder="Correo">
+        <input type="password" id="pass" placeholder="Contraseña">
+        <input type="password" id="pass2" placeholder="Repetir Contraseña">
+        <button onclick="registrar()">Registrarse</button>
+    </div>
+</div>
+</body>
+</html>
