@@ -19,10 +19,8 @@ window.onload=function(){
 
 <div class="header">
     <h1>AGENDA DE CONTACTOS</h1>
-    <div class="nav">
-        <a href="../menu/menu.html">Menú</a>
-        <a href="MisContactos.html">Mi Cuenta</a>
-        <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+    <div class="search-globe">
+        <input type="text" id="buscador" placeholder="🔍 Buscar..." onkeyup="buscarContacto()">
     </div>
 </div>
 
@@ -31,18 +29,45 @@ window.onload=function(){
         <button class="active" onclick="mostrarLista()">Ver Contactos</button>
         <button onclick="mostrarFormulario()">Añadir Contacto</button>
     </div>
-    <div class="search">
-        <input type="text" id="buscador" placeholder="Buscar contacto..." onkeyup="buscarContacto()">
+    <div class="filters">
+        <label for="filtroCategoria">Filtrar por categoría:</label>
+        <select id="filtroCategoria" onchange="filtrarPorCategoria()"></select>
+        <label for="ordenar">Ordenar:</label>
+        <select id="ordenar" onchange="ordenar()">
+            <option value="">Ninguno</option>
+            <option value="nombre-az">Nombre A-Z</option>
+            <option value="nombre-za">Nombre Z-A</option>
+            <option value="recientes">Más recientes</option>
+            <option value="modificados">Modificados recientemente</option>
+        </select>
     </div>
     <div id="listaContactos"></div>
-    <button class="add-contacto" onclick="mostrarFormulario()">+ Añadir Nuevo Contacto</button>
-    <div class="formulario" id="formulario">
-        <input type="text" id="nombre" placeholder="Nombre">
-        <input type="text" id="telefono" placeholder="Teléfono">
-        <input type="email" id="correo" placeholder="Correo">
-        <input type="text" id="categoria" placeholder="Categoría">
-        <button onclick="guardarContacto()">Guardar Contacto</button>
+    <div class="modal" id="modalFormulario">
+        <div class="modal-content">
+            <h3 id="tituloFormulario">Añadir Contacto</h3>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" placeholder="">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" placeholder="">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" list="categorias" placeholder="">
+            <datalist id="categorias">
+                <option value="Familia">
+                <option value="Amig@">
+                <option value="Maestr@">
+            </datalist>
+            <button onclick="cerrarModal()">Cancelar</button>
+            <button id="btnGuardar" onclick="guardarContacto()">Guardar Contacto</button>
+        </div>
     </div>
+</div>
+
+<div class="floating-buttons">
+    <button onclick="location.href='../menu/menu.html'" title="Menú">🏠</button>
+    <button onclick="location.href='MiCuenta.html'" title="Mi Cuenta">👤</button>
+    <button onclick="cerrarSesion()" title="Cerrar Sesión">🚪</button>
 </div>
 </body>
 </html>
